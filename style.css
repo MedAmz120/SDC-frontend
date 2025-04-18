@@ -1,0 +1,482 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Frame Styles */
+.frame {
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    width: 110%;
+}
+
+.frame-long {
+    height: 620px;
+}
+
+.frame-short {
+    height: 500px;
+}
+
+/* Navigation Styles */
+.nav {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.nav-up {
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #94a3b8;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.links li a:hover,
+.signin-active a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Section Styles */
+.section-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Form Styles */
+.form-styling {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.form-styling:focus {
+    border-color: #3b82f6;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.form-styling::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+label {
+    display: block;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Date Picker Customization */
+.flatpickr-calendar {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.flatpickr-day {
+    color: #fff;
+}
+
+.flatpickr-day.selected {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Parameters Section */
+.parameters-section {
+    margin-top: 32px;
+}
+
+.parameter-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+/* Switch Styling */
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    width: 48px;
+    height: 24px;
+}
+
+.form-check-input:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.form-switch .form-check-input {
+    margin-left: 0;
+}
+
+/* Generate Button */
+.btn-generate {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-generate svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-generate:hover svg {
+    transform: translateY(2px);
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+/* Button Styles */
+.btn-signin,
+.btn-signup {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+}
+
+.btn-signin:hover,
+.btn-signup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Checkbox Styles */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #3b82f6;
+}
+
+.checkbox-container label {
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* Terms & Contact */
+.terms,
+.contact {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.terms a,
+.contact a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.terms a:hover,
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Decorative Elements */
+.decoration {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.decoration-1 {
+    background: #3b82f6;
+    top: -100px;
+    right: -100px;
+}
+
+.decoration-2 {
+    background: #2563eb;
+    bottom: -100px;
+    left: -100px;
+}
+
+/* Welcome Section */
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    transition: all 0.5s ease;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.welcome h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cover-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #4CAF50;
+    transition: all 0.5s ease;
+}
+
+.cover-photo-down {
+    height: 100px;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    border: 5px solid #4CAF50;
+    transition: all 0.5s ease;
+}
+
+.profile-photo-down {
+    top: 50px;
+    width: 80px;
+    height: 80px;
+}
+
+/* Forgot Password */
+.forgot {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Go Back Button */
+.btn-goback {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-goback:hover {
+    background: #45a049;
+}
+
+.btn-goback-up {
+    bottom: 100px;
+}
+
+/* Refresh Icon */
+#refresh {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.refreshicon {
+    fill: #4CAF50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .frame {
+        width: 100%;
+        padding: 24px;
+    }
+    
+    .social-login {
+        flex-direction: column;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-6 {
+        width: 100%;
+    }
+}
+
+.month-field {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.month-field:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.month-field input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.month-field input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    color: white;
+}
