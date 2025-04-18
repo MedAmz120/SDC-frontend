@@ -19,11 +19,11 @@
         <div class="row justify-content-center">
             <div class="col-xl-10">
                 <div class="frame mx-auto">
-                    <h2 class="text-center mb-4">Super Data Creator</h2>
+                    <h2 class="text-left mb-4" style="margin-left: 100px;" >Super Data Creator</h2>
 
                     <!-- Replace your existing button and inputs block with this cleaned version -->
                     <form id="csvGeneratorForm" class="form">
-                        <div class="blur"></div>
+                        <!-- <div class="blur"></div> -->
                         <!-- <div class="form__wrapper">
       <input class="form__input" type="text" id="username" placeholder=" " required>
       <label class="form__label" for="username">Username</label>
@@ -42,7 +42,7 @@
                                         <div class="form__wrapper">
                                             <input class="form__input" class="form-styling date-picker" type="text"
                                                 id="startDate" placeholder=" ">
-                                            <label class="form__label" for="startDate">Start Date</label>
+                                            <label class="form__label"  for="startDate">Start Date</label>
                                         </div>
                                         <div class="form__wrapper">
                                             <input class="form__input" type="text" class="form-styling date-picker"
@@ -52,7 +52,7 @@
                                         <!-- <input type="text" class="form-styling date-picker" id="startDate" placeholder="Start date">
                 <label class="form__label" for="startDate">Start Date</label> -->
                                     </div>
-                                    <div id="monthFields" class="mt-3"></div>
+                                    <div id="monthFields" class="mt-3" style="width: 300px;"></div>
                                 </div>
 
                                 <div class="order-details-section mb-4">
@@ -81,7 +81,7 @@
                             <div class="col-md-6">
                                 <div class="traffic-source-section mb-4">
                                     <h5 class="section-title">Traffic Source</h5>
-                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent; width: 400px;">
                                         <div class="d-flex justify-content-between align-items-center" >
                                             <label class="form-check-label" for="instagramSource">Instagram</label>
                                             <div class="form-check form-switch">
@@ -89,7 +89,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; width: 400px; background: transparent;">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <label class="form-check-label" for="facebookSource">Facebook</label>
                                             <div class="form-check form-switch">
@@ -97,7 +97,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; width: 400px; background: transparent;">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <label class="form-check-label" for="googleSource">Google</label>
                                             <div class="form-check form-switch">
@@ -107,10 +107,10 @@
                                     </div>
                                 </div>
 
-                                <div class="file-name-section mb-4">
-                                    <h5 class="section-title">File Name</h5>
-                                    <div class="form__wrapper">
-                                        <input class="form__input" type="text" class="form-styling" id="fileName"
+                                <div class="file-name-section mb-4" >
+                                    <h5 class="section-title" >File Name</h5>
+                                    <div class="form__wrapper" >
+                                        <input class="form__input" style="width: 400px !important;" type="text" class="form-styling" id="fileName"
                                             placeholder=" " step="0.01" min="0">
                                         <label class="form__label" class="form-styling" id="orderTotal"
                                             for="fileName">Order Total</label>
