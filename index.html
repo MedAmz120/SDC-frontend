@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,84 +10,96 @@
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="decoration decoration-1"></div>
     <div class="decoration decoration-2"></div>
-    
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-10">
                 <div class="frame mx-auto">
                     <h2 class="text-center mb-4">Super Data Creator</h2>
-                    
-                    <form id="csvGeneratorForm">
+
+                    <!-- Replace your existing button and inputs block with this cleaned version -->
+                    <form id="csvGeneratorForm" class="form">
+                        <div class="blur"></div>
+                        <!-- <div class="form__wrapper">
+      <input class="form__input" type="text" id="username" placeholder=" " required>
+      <label class="form__label" for="username">Username</label>
+    </div>
+    <div class="form__wrapper">
+      <input class="form__input" type="password" id="password" placeholder=" " required>
+      <label class="form__label" for="password">Password</label>
+    </div> -->
+
+                        <!-- Rest of form remains mostly unchanged except for ID fixes in labels -->
                         <div class="row">
-                            <!-- Left Column -->
                             <div class="col-md-6">
-                                <!-- Date Range Section -->
                                 <div class="date-range-section mb-4">
                                     <h5 class="section-title">Date Range</h5>
                                     <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="startDate">Start Date</label>
-                                            <input type="text" class="form-styling date-picker" id="startDate" placeholder="Start date">
+                                        <div class="form__wrapper">
+                                            <input class="form__input" class="form-styling date-picker" type="text"
+                                                id="startDate" placeholder=" ">
+                                            <label class="form__label" for="startDate">Start Date</label>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="endDate">End Date</label>
-                                            <input type="text" class="form-styling date-picker" id="endDate" placeholder="End date">
+                                        <div class="form__wrapper">
+                                            <input class="form__input" type="text" class="form-styling date-picker"
+                                                id="endDate" placeholder=" ">
+                                            <label class="form__label" for="endDate">End Date</label>
                                         </div>
+                                        <!-- <input type="text" class="form-styling date-picker" id="startDate" placeholder="Start date">
+                <label class="form__label" for="startDate">Start Date</label> -->
                                     </div>
-                                    <div id="monthFields" class="mt-3">
-                                        <!-- Month fields will be dynamically added here -->
-                                    </div>
+                                    <div id="monthFields" class="mt-3"></div>
                                 </div>
 
-                                <!-- Order Details Section -->
                                 <div class="order-details-section mb-4">
                                     <h5 class="section-title">Order Details</h5>
-                                    <div class="mb-3">
-                                        <label for="lineItem">Line Item</label>
-                                        <input type="text" class="form-styling" id="lineItem" placeholder="Enter line item">
+                                    <div class="form__wrapper">
+                                        <input class="form__input" type="text" id="lineItem" placeholder=" ">
+                                        <label class="form__label" for="lineItem">Line Item</label>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="orderTotal">Order Total</label>
-                                        <input type="number" class="form-styling" id="orderTotal" placeholder="Enter order total" step="0.01" min="0">
+                                    <div class="form__wrapper">
+                                        <input class="form__input" type="number" class="form-styling" id="orderTotal"
+                                            placeholder=" " step="0.01" min="0">
+                                        <label class="form__label" class="form-styling" id="orderTotal"
+                                            for="orderTotal">Order Total</label>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="entryUrl">Entry URL</label>
-                                        <input type="url" class="form-styling" id="entryUrl" 
-                                               placeholder="Enter meta:_wc_order_attribution_session_entry URL">
+                                    <!-- <div class="mb-3">
+              <input type="number" class="form-styling" id="orderTotal" placeholder="Enter order total" step="0.01" min="0">
+              <label for="orderTotal">Order Total</label>
+            </div> -->
+                                    <div class="form__wrapper">
+                                        <input class="form__input" id="entryUrl" type="url" placeholder=" ">
+                                        <label class="form__label" for="entryUrl">Entry URL</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Right Column -->
                             <div class="col-md-6">
-                                <!-- Traffic Source Section -->
                                 <div class="traffic-source-section mb-4">
                                     <h5 class="section-title">Traffic Source</h5>
-                                    
-                                    <div class="parameter-item">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <label class="form-check-label">Instagram</label>
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
+                                        <div class="d-flex justify-content-between align-items-center" >
+                                            <label class="form-check-label" for="instagramSource">Instagram</label>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" id="instagramSource">
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="parameter-item">
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <label class="form-check-label">Facebook</label>
+                                            <label class="form-check-label" for="facebookSource">Facebook</label>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" id="facebookSource">
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="parameter-item">
+                                    <div class="parameter-item" style="border: 1px solid var(--main-color); border-radius: 3px; background: transparent;">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <label class="form-check-label">Google</label>
+                                            <label class="form-check-label" for="googleSource">Google</label>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" id="googleSource">
                                             </div>
@@ -94,35 +107,60 @@
                                     </div>
                                 </div>
 
-                                <!-- File Name Section -->
                                 <div class="file-name-section mb-4">
                                     <h5 class="section-title">File Name</h5>
-                                    <div class="mb-3">
-                                        <label for="fileName">Output File Name</label>
-                                        <input type="text" class="form-styling" id="fileName" placeholder="(without extension)">
+                                    <div class="form__wrapper">
+                                        <input class="form__input" type="text" class="form-styling" id="fileName"
+                                            placeholder=" " step="0.01" min="0">
+                                        <label class="form__label" class="form-styling" id="orderTotal"
+                                            for="fileName">Order Total</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn-generate">
+                            <button class="form__btn btn-generate" type="submit" id="generateCSVBtn">
                                 Generate CSV
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down ms-2" viewBox="0 0 16 16">
-                                    <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
-                                    <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-file-earmark-arrow-down ms-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z" />
+                                    <path
+                                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
                                 </svg>
                             </button>
                         </div>
                     </form>
+
+                    <div class="cube" style="left: 80%; top: 70%;">
+                        <div class="cube__polygon cube__polygon--top">1</div>
+                        <div class="cube__polygon cube__polygon--back">2</div>
+                        <div class="cube__polygon cube__polygon--left">3</div>
+                        <div class="cube__polygon cube__polygon--right">4</div>
+                        <div class="cube__polygon cube__polygon--front">5</div>
+                        <div class="cube__polygon cube__polygon--bottom">6</div>
+                    </div>
+                
+                    <div class="cube">
+                        <div class="cube__polygon cube__polygon--top">TOP</div>
+                        <div class="cube__polygon cube__polygon--back">BACK</div>
+                        <div class="cube__polygon cube__polygon--left">LEFT</div>
+                        <div class="cube__polygon cube__polygon--right">RIGHT</div>
+                        <div class="cube__polygon cube__polygon--front">FRONT</div>
+                        <div class="cube__polygon cube__polygon--bottom">BOTTOM</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

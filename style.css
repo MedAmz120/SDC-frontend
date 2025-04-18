@@ -1,4 +1,9 @@
 /* General Styles */
+/* inputs */
+:root {
+    --main-color: lime;
+    }
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +29,7 @@ body {
 
 /* Frame Styles */
 .frame {
-    background: rgba(30, 41, 59, 0.8);
+    background: #151515a6;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 2.5rem;
@@ -80,7 +85,7 @@ body {
 
 /* Section Styles */
 .section-title {
-    color: #fff;
+    color: var(--main-color);
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -95,34 +100,38 @@ body {
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid lime;
+    
 
 }
 
 .form-styling:focus {
-    border-color: #3b82f6;
-    background: rgba(255, 255, 255, 0.1);
+    border-color: --main-color;
+    background: none;
     outline: none;
 }
 
 .form-styling::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: --main-color;
 }
 
 label {
     display: block;
-    color: #94a3b8;
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 8px;
 }
+input
+{
+    font-size: 14px !important;
+}
 
 /* Date Picker Customization */
 .flatpickr-calendar {
-    background: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    background: rgba(17, 110, 6, 0.969);
+    border: 1px solid lime;
+    box-shadow: 0 8px 32px lime;
     border-radius: 12px;
 }
 
@@ -131,8 +140,8 @@ label {
 }
 
 .flatpickr-day.selected {
-    background: #3b82f6;
-    border-color: #3b82f6;
+    background: lime;
+    border-color: lime;
 }
 
 /* Parameters Section */
@@ -151,13 +160,14 @@ label {
 .form-check-input {
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.1);
+    
     width: 48px;
     height: 24px;
 }
 
 .form-check-input:checked {
-    background-color: #3b82f6;
-    border-color: #3b82f6;
+    background-color: lime;
+    border-color: lime;
 }
 
 .form-switch .form-check-input {
@@ -168,7 +178,7 @@ label {
 .btn-generate {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg,lime 0%lime 100%);
     color: white;
     border: none;
     border-radius: 12px;
@@ -185,15 +195,7 @@ label {
 
 .btn-generate:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-}
-
-.btn-generate svg {
-    transition: transform 0.3s ease;
-}
-
-.btn-generate:hover svg {
-    transform: translateY(2px);
+    box-shadow: 0 4px 12px rgba(2, 4, 3, 0.771);
 }
 
 /* Social Login Buttons */
@@ -235,7 +237,7 @@ label {
     align-items: center;
     text-align: center;
     margin: 24px 0;
-    color: #94a3b8;
+    color: lime;
     font-size: 14px;
 }
 
@@ -255,7 +257,7 @@ label {
 .btn-signup {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, lime 0%, lime 100%);
     color: white;
     border: none;
     border-radius: 12px;
@@ -269,7 +271,7 @@ label {
 .btn-signin:hover,
 .btn-signup:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
 }
 
 /* Checkbox Styles */
@@ -283,11 +285,11 @@ input[type="checkbox"] {
     width: 18px;
     height: 18px;
     margin-right: 8px;
-    accent-color: #3b82f6;
+    accent-color: lime;
 }
 
 .checkbox-container label {
-    color: #94a3b8;
+    color: lime;
     margin: 0;
 }
 
@@ -295,14 +297,14 @@ input[type="checkbox"] {
 .terms,
 .contact {
     text-align: center;
-    color: #94a3b8;
+    color: white;
     font-size: 14px;
     margin-top: 16px;
 }
 
 .terms a,
 .contact a {
-    color: #3b82f6;
+    color: lime;
     text-decoration: none;
 }
 
@@ -323,13 +325,13 @@ input[type="checkbox"] {
 }
 
 .decoration-1 {
-    background: #3b82f6;
+    background: lime;
     top: -100px;
     right: -100px;
 }
 
 .decoration-2 {
-    background: #2563eb;
+    background: lime;
     bottom: -100px;
     left: -100px;
 }
@@ -340,7 +342,7 @@ input[type="checkbox"] {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #333;
+    color: #fff;
     transition: all 0.5s ease;
     text-align: center;
     width: 100%;
@@ -461,16 +463,17 @@ input[type="checkbox"] {
     background: rgba(255, 255, 255, 0.05);
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.2s ease;
+    transition: #0f0f0f 0.2s ease;
+    border: 1px solid var(--main-color);
 }
 
 .month-field:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: #0f0f0f4d;
 }
 
 .month-field input {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background:  rgba(255, 255, 255, 0.2);
+    border: 1px solid #0f0f0f;
     color: white;
 }
 
@@ -479,4 +482,185 @@ input[type="checkbox"] {
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: none;
     color: white;
+}
+
+
+/*test*/
+
+body {
+background: #010101;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font: normal 500 20px/1.5 monospace, sans-serif;
+}
+/* form background */
+.form {
+padding: 100px;
+background: none;
+backdrop-filter: blur(8px);
+z-index: 2;
+}
+
+.form__wrapper {
+position: relative;
+}
+
+.form__input {
+background: transparent;
+outline: transparent;
+border: 1px solid var(--main-color);
+border-radius: 3px;
+height: 30px;
+width: 250px;
+color: white;
+padding-inline: 10px;
+font-size: 1.2em;
+}
+
+.form__input {
+margin-bottom: 20px;
+}
+
+.form__label {
+position: absolute;
+left: .5em;
+top: .08em;
+color: var(--main-color);
+display: inline-block;
+transition: top .2s, font-size .2s;
+will-change: top, font-size;
+padding-inline: .2em;
+cursor: text;
+pointer-events: none;
+background-color: #101010;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+top: -1.0em;
+font-size: .9rem;
+cursor: default;
+}
+
+/* button */
+
+.form__btn {
+cursor: pointer;
+background: transparent;
+color: var(--main-color);
+border: 1px solid var(--main-color);
+margin-inline: auto;
+padding: 10px 20px;
+text-transform:uppercase;
+font-size: .8em;
+line-height: 1;
+display: block;
+position: relative;
+font-weight: 600;
+}
+/* .form__btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: var(--main-color);
+transition: width 1.5s;
+} */
+
+.form__btn .form__btn-inner {
+color: var(--main-color);
+mix-blend-mode: difference;
+}
+.form__btn:hover::before {
+width: 100%;
+}
+
+/* cube */
+@keyframes rotate-YX {
+to {
+transform: rotateY(360deg) rotateX(360deg);
+}
+}
+
+
+.cube {
+transition: all 0.2s;
+position: absolute;
+transform-style: preserve-3d;
+transform: rotateY(0deg) rotateX(0deg);
+cursor: pointer;
+user-select: none;
+left: 15%;
+top: 20%;
+transform-origin: 36.3px 91px;
+animation: rotate-YX 18s linear infinite;
+will-change: transform;
+z-index: -100;
+}
+
+.cube__polygon {
+width: 200px;
+height: 200px;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: monospace;
+font-weight: 600;
+font-size: 22px;
+transition: all .3s;
+border: 1px solid var(--main-color);
+will-change: transform;
+}
+.cube__polygon--top {
+transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube__polygon--front {
+transform: translateZ(100px);
+}
+.cube__polygon--left {
+transform: rotateY(-90deg) translateZ(100px);
+}
+.cube__polygon--right {
+transform: rotateY(90deg) translateZ(100px);
+}
+.cube__polygon--bottom {
+transform: rotateX(-90deg) translateZ(100px);
+}
+.cube__polygon--back {
+transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube:not(:nth-child(2)):hover .cube__polygon {
+background-color: #ffa500ad;
+border-color: #fff;
+}
+
+/* cube 2 */
+.cube:nth-child(2) {
+top: 70%;
+left: 70%;
+zoom: .7;
+transform-origin: 0 0;
+animation: rotate-YX 15s linear infinite;
+}
+/* cube 2 animation */
+.cube:nth-child(2) .cube__polygon {
+font-size: 0.1em;
+}
+
+.cube:nth-child(2):hover .cube__polygon {
+color: var(--main-color);
+font-size: 2em;
+}
+
+.cube:nth-child(2) .cube__polygon:hover {
+color: fuchsia;
+border: 3px solid fuchsia;
 }
